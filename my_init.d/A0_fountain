@@ -1,8 +1,3 @@
 #!/bin/sh
-if [ -z "$AGORA_FOUNTAIN_VERSION" ]; then
-    /usr/lib/agora/.env/bin/pip install --upgrade Agora-Fountain
-else
-	/usr/lib/agora/.env/bin/pip install --upgrade Agora-Fountain==$AGORA_FOUNTAIN_VERSION
-fi
-
+/usr/lib/agora/.env/bin/pip install --upgrade git+https://github.com/smartdeveloperhub/agora-fountain.git@develop
 /usr/lib/agora/.env/bin/fountain &
